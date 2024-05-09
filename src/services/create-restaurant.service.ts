@@ -6,12 +6,8 @@ export class CreateRestaurantService {
         this.createRestaurantRepository = new CreateRestaurantRepo()
     }
 
-    public handle() {
-        console.log('dentro da handle')
-        const data = {
-            name: 'teste',
-            email: 'teste'
-        }
-        const result = this.createRestaurantRepository.create(data)
+    public handle(payload: any) {
+        
+        const result = this.createRestaurantRepository.create(payload)
     }
 }

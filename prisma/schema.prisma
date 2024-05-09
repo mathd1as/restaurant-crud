@@ -12,10 +12,23 @@ datasource db {
 
 model User {
   id  String @id @default(uuid())
-  name String
+  address String
   email String @unique
   createdAt DateTime @default(now())
   updateAt DateTime @updatedAt
 
   @@map("users")
 }
+
+model Restaurant {
+  id  String @id @default(uuid())
+  name String
+  picture Bytes
+  openingTime DateTime
+  closingTime DateTime
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+
+  @@map("Restaurant")
+}
+
