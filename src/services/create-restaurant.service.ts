@@ -6,7 +6,7 @@ export class CreateRestaurantService {
         this.createRestaurantRepository = new CreateRestaurantRepo()
     }
 
-    public handle(payload: any) {
+    public handle(payload: any): Promise<any> {
         const result = this.createRestaurantRepository.create(payload)
         return result
     }
