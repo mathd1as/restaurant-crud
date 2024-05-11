@@ -7,7 +7,7 @@ export class CreateRestaurantService {
     }
 
     public handle(payload: any) {
-        
         const result = this.createRestaurantRepository.create(payload)
+        return result
     }
 }
