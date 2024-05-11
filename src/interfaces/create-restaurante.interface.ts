@@ -2,10 +2,10 @@ export interface CreateRestaurantInterface {
     create(data: any): Promise<any>;
 }
 
-export interface createRestaurantRequest {
-    name: String,
-    address: String,
-    picture: String,
-    openingTime: String,
-    closingTime: String
+export interface CreateRestaurant {
+    name: string;
+    address: string;
+    picture: string;
+    openingTime: string;
+    closingTime: string;
 }

@@ -14,7 +14,7 @@ model Restaurant {
   id  String @id @default(uuid())
   name String
   address String
-  picture Bytes
+  picture String
   openingTime String
   closingTime String
   createdAt DateTime @default(now())
