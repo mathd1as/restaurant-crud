@@ -14,7 +14,7 @@ export const CreateRestaurantRoute = async (app: FastifyInstance) => {
 
     const createRestaurantService = new CreateRestaurantService()
     
-    const result = createRestaurantService.handle(restaurantProps);
+    const result = await createRestaurantService.handle(restaurantProps);
 
     return response.status(200).send(result)
   })
