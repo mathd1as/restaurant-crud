@@ -15,11 +15,21 @@ model Restaurant {
   name String
   address String
   picture Bytes
-  openingTime DateTime
-  closingTime DateTime
+  openingTime String
+  closingTime String
   createdAt DateTime @default(now())
   updateAt DateTime @updatedAt
 
-  @@map("Restaurant")
+  @@map("restaurants")
+}
+
+model User {
+   id  String @id @default(uuid())
+   name String
+   email String @unique
+   createdAt DateTime @default(now())
+   updateAt DateTime @updatedAt
+
+   @@map("users")
 }
 

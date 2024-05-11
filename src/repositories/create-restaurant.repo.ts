@@ -3,8 +3,11 @@ import { CreateRestaurantInterface } from "../interfaces/create-restaurante.inte
 
 export class CreateRestaurantRepo implements CreateRestaurantInterface {
     async create(payload: any): Promise<any> {
-        // alterar para restaurante depois
-        const result = await prisma.restaurant.create(payload)
+        const result = await prisma.restaurant.create({
+            data: {
+                ...payload
+            }
+        })
         return result
     }
 }
