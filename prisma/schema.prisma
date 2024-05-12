@@ -11,25 +11,42 @@ datasource db {
 }
 
 model Restaurant {
-  id  String @id @default(uuid())
-  name String
-  address String
-  picture String
+  id          String    @id @default(uuid())
+  name        String
+  address     String
+  picture     String
   openingTime String
   closingTime String
-  createdAt DateTime @default(now())
-  updateAt DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updateAt    DateTime  @updatedAt
+  Product     Product[]
 
   @@map("restaurants")
 }
 
-model User {
-   id  String @id @default(uuid())
-   name String
-   email String @unique
-   createdAt DateTime @default(now())
-   updateAt DateTime @updatedAt
+model Product {
+  id                    String     @id @default(uuid())
+  restaurant            Restaurant @relation(fields: [restaurantId], references: [id])
+  restaurantId          String
+  name                  String
+  picture               String
+  price                 Float
+  category              String
+  promotionPrice        Float?
+  promotionDescription  String?
+  promotionDaysAndTimes String?
+  createdAt             DateTime   @default(now())
+  updateAt              DateTime   @updatedAt
 
-   @@map("users")
+  @@map("products")
 }
 
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updateAt  DateTime @updatedAt
+
+  @@map("users")
+}
