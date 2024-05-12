@@ -19,19 +19,19 @@ model Restaurant {
   closingTime String
   createdAt   DateTime  @default(now())
   updateAt    DateTime  @updatedAt
-  Product     Product[]
 
   @@map("restaurants")
 }
 
 model Product {
   id                    String     @id @default(uuid())
-  restaurant            Restaurant @relation(fields: [restaurantId], references: [id])
+  // restaurant            Restaurant @relation(fields: [restaurantId], references: [id])
   restaurantId          String
   name                  String
   picture               String
   price                 Float
   category              String
+  promotionActive       Boolean
   promotionPrice        Float?
   promotionDescription  String?
   promotionDaysAndTimes String?
