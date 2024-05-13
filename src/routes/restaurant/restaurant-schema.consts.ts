@@ -20,11 +20,32 @@ export const createRestaurantBody = {
     }
 }
 
-export const GetRestaurantQueryString = {
+export const RestaurantQueryStringId = {
   type: 'object',
   properties: {
     id: {
       type: 'string',
     },
+  },
+}
+
+export const UpdateRestaurantBody = {
+  type: 'object',
+  properties: {
+    name: {
+      type: 'string'
+    },
+    address: {
+      type: 'string'
+    },
+    picture: {
+      type: 'string'
+    },
+    openingTime: {
+      type: 'string'
+    },
+    closingTime: {
+      type: 'string'
+    }
   },
 }
