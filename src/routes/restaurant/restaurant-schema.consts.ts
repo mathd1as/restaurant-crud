@@ -19,3 +19,12 @@ export const createRestaurantBody = {
       }
     }
 }
+
+export const GetRestaurantQueryString = {
+  type: 'object',
+  properties: {
+    id: {
+      type: 'string',
+    },
+  },
+}
