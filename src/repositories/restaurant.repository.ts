@@ -1,0 +1,40 @@
+import { prisma } from "../database/prisma.client";
+import { RestaurantRepositoryInterface } from "../interfaces/restaurant.interface";
+
+export class RestaurantRepository implements RestaurantRepositoryInterface {
+    async create(payload: any): Promise<any> {
+        try {
+            return await prisma.product.create({
+                data: {
+                    ...payload
+                }
+            })
+        } catch(error) {
+            console.log(error)
+        }
+    }
+
+    async find(id: string): Promise<any> {
+        return await prisma.restaurant.findUnique({
+            where: {
+                id: id,
+            },
+            select: { id: true, address: true, name: true, closingTime: true, createdAt: true, openingTime: true, picture: true, updateAt: true },
+        })
+    }
+
+    async findAll(): Promise<any> {
+        return await prisma.restaurant.findMany({})
+    }
+
+    async update(payload: {id: string, props: any}): Promise<any> {
+        return await prisma.restaurant.update({
+            where: {
+                id: payload.id,
+            },
+            data: {
+                ...payload.props
+            }
+        })
+    }
+}
