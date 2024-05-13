@@ -1,5 +1,8 @@
 export interface RestaurantRepositoryInterface {
     create(data: any): Promise<any>;
+    find(data: any): Promise<any>;
+    findAll(data: any): Promise<any>;
+    update(data: any): Promise<any>;
 }
 
 export interface CreateRestaurant {
@@ -17,3 +20,8 @@ export interface UpdateRestaurantBodyInterface {
     openingTime?: string
     closingTime?: string
 }
+
+export interface GetRestaurantParamInterface {
+    id?: string
+}
+
