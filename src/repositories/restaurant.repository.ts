@@ -3,15 +3,12 @@ import { RestaurantRepositoryInterface } from "../interfaces/restaurant.interfac
 
 export class RestaurantRepository implements RestaurantRepositoryInterface {
     async create(payload: any): Promise<any> {
-        try {
-            return await prisma.product.create({
-                data: {
-                    ...payload
-                }
-            })
-        } catch(error) {
-            console.log(error)
-        }
+        const result = await prisma.restaurant.create({
+            data: {
+                ...payload
+            }
+        })
+        return result
     }
 
     async find(id: string): Promise<any> {

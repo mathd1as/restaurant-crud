@@ -1,4 +1,4 @@
-export interface CreateProductInterface {
+export interface ProductRepositoryInterface {
     create(data: any): Promise<any>;
 }
 

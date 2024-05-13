@@ -1,7 +1,7 @@
 import { prisma } from "../database/prisma.client";
-import { CreateProductInterface } from "../interfaces/create-product.interface";
+import { ProductRepositoryInterface } from "../interfaces/product.interface";
 
-export class CreateProductRepo implements CreateProductInterface {
+export class ProductRepository implements ProductRepositoryInterface {
     async create(payload: any): Promise<any> {
         try {
             return await prisma.product.create({
