@@ -2,14 +2,14 @@ import { prisma } from "../database/prisma.client";
 import { RestaurantRepositoryInterface } from "../interfaces/restaurant.interface";
 
 export class RestaurantRepository implements RestaurantRepositoryInterface {
-    async create(payload: any): Promise<any> {
-        const result = await prisma.restaurant.create({
-            data: {
-                ...payload
-            }
-        })
-        return result
-    }
+  async create(payload: any): Promise<any> {
+    const result = await prisma.restaurant.create({
+      data: {
+          ...payload
+      }
+    })
+    return result
+  }
 
     async find(id: string): Promise<any> {
         return await prisma.restaurant.findUnique({
@@ -32,6 +32,14 @@ export class RestaurantRepository implements RestaurantRepositoryInterface {
             data: {
                 ...payload.props
             }
+        })
+    }
+
+    async delete(id: string): Promise<any> {
+        return await prisma.restaurant.delete({
+            where: {
+                id,
+            },
         })
     }
 }

@@ -25,3 +25,7 @@ export interface GetRestaurantParamInterface {
     id?: string
 }
 
+export interface DeleteRestaurantParamInterface {
+    id: string
+}
+

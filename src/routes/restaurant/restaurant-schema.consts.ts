@@ -49,3 +49,10 @@ export const UpdateRestaurantBody = {
     }
   },
 }
+
+export const DeleteRestaurantParam = {
+  type: 'object',
+  properties: {
+    id: { type: 'string' },
+  }
+}

@@ -42,4 +42,8 @@ export class RestaurantService {
     private validateInputs(inputs: UpdateRestaurantBodyInterface) {
         if (Object.keys(inputs).length === 0) throw new Error('Deve ser passado no minimo uma propriedade')
     }
+
+    public async delete(id: string) {
+        return await this.restaurantRepository.delete(id)
+    }
 }
