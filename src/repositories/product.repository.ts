@@ -1,15 +1,15 @@
-import { prisma } from "../database/prisma.client";
-import { ProductRepositoryInterface } from "../interfaces/product.interface";
+import { prisma } from "../database/prisma.client"
+import { ProductRepositoryInterface } from "../interfaces/product.interface"
 
 export class ProductRepository implements ProductRepositoryInterface {
   async create(payload: any): Promise<any> {
     try {
       return await prisma.product.create({
-          data: {
-              ...payload
-          }
+        data: {
+          ...payload,
+        },
       })
-    } catch(error) {
+    } catch (error) {
       console.log(error)
     }
   }
@@ -17,8 +17,8 @@ export class ProductRepository implements ProductRepositoryInterface {
   async get(id: any): Promise<any> {
     return await prisma.product.findMany({
       where: {
-        restaurantId: id 
-      }
+        restaurantId: id,
+      },
     })
   }
 
@@ -29,8 +29,8 @@ export class ProductRepository implements ProductRepositoryInterface {
           id: payload.id,
         },
         data: {
-          ...payload.props
-        }
+          ...payload.props,
+        },
       })
     } catch (error) {
       console.log(error)
@@ -42,7 +42,7 @@ export class ProductRepository implements ProductRepositoryInterface {
       return await prisma.product.delete({
         where: {
           id,
-        }
+        },
       })
     } catch (error) {
       console.log(error)

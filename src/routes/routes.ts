@@ -1,9 +1,8 @@
-import {app} from '../server.ts'
-import { ProductRoutes } from './product/product.route.ts'
-import { RestaurantRoutes } from './restaurant/restaurant.routes.ts'
-
+import { app } from "../server"
+import { ProductRoutes } from "./product/product.route"
+import { RestaurantRoutes } from "./restaurant/restaurant.routes"
 
 export const routes = async () => {
-    app.register(RestaurantRoutes)
-    app.register(ProductRoutes)
+  app.register(RestaurantRoutes)
+  app.register(ProductRoutes)
 }

@@ -1,33 +1,33 @@
 export const createProductBody = {
-  type: 'object',
-  required: ['name', 'category', 'picture', 'price', 'promotionActive'],
+  type: "object",
+  required: ["name", "category", "picture", "price", "promotionActive"],
   properties: {
     name: {
-      type: 'string'
+      type: "string",
     },
     category: {
-      type: 'string'
+      type: "string",
     },
     picture: {
-      type: 'string'
+      type: "string",
     },
     price: {
-      type: 'number'
+      type: "number",
     },
     promotionActive: {
-      type: 'boolean'
+      type: "boolean",
     },
     restaurantId: {
-      type: 'string'
+      type: "string",
     },
     promotionPrice: {
-      type: 'number'
+      type: "number",
     },
     promotionDescription: {
-      type: 'string'
+      type: "string",
     },
     promotionDaysAndTimes: {
-      type: 'string'
-    }
-  }
+      type: "string",
+    },
+  },
 }

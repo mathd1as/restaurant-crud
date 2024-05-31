@@ -1,58 +1,58 @@
 export const createRestaurantBody = {
-    type: 'object',
-    required: ['name', 'address', 'picture', 'openingTime', 'closingTime'],
-    properties: {
-      name: {
-        type: 'string'
-      },
-      address: {
-        type: 'string'
-      },
-      picture: {
-        type: 'string'
-      },
-      openingTime: {
-        type: 'string'
-      },
-      closingTime: {
-        type: 'string'
-      }
-    }
+  type: "object",
+  required: ["name", "address", "picture", "openingTime", "closingTime"],
+  properties: {
+    name: {
+      type: "string",
+    },
+    address: {
+      type: "string",
+    },
+    picture: {
+      type: "string",
+    },
+    openingTime: {
+      type: "string",
+    },
+    closingTime: {
+      type: "string",
+    },
+  },
 }
 
 export const RestaurantQueryStringId = {
-  type: 'object',
+  type: "object",
   properties: {
     id: {
-      type: 'string',
+      type: "string",
     },
   },
 }
 
 export const UpdateRestaurantBody = {
-  type: 'object',
+  type: "object",
   properties: {
     name: {
-      type: 'string'
+      type: "string",
     },
     address: {
-      type: 'string'
+      type: "string",
     },
     picture: {
-      type: 'string'
+      type: "string",
     },
     openingTime: {
-      type: 'string'
+      type: "string",
     },
     closingTime: {
-      type: 'string'
-    }
+      type: "string",
+    },
   },
 }
 
 export const DeleteRestaurantParam = {
-  type: 'object',
+  type: "object",
   properties: {
-    id: { type: 'string' },
-  }
+    id: { type: "string" },
+  },
 }
