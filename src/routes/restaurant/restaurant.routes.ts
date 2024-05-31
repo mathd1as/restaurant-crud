@@ -18,6 +18,7 @@ const schema = {
 
 export const RestaurantRoutes = async (app: FastifyInstance) => {
   const restaurantService = new RestaurantService() 
+  
   app.post('/restaurant', { schema }, async (request: FastifyRequest<{ Body: CreateRestaurant }>, response: FastifyReply) => {
     const { name, address, picture, openingTime, closingTime } = request.body
     const restaurantProps = { name, address, picture, openingTime, closingTime }
