@@ -1,6 +1,6 @@
-# Lista Rango API
+# MarmitaX API
 ## Descrição
-Back-end do APP **Lista Rango** (em desenvolvimento). API desenvolvida em node.js, utilizando Prisma, Fastify e coiceitos de SOLID.
+Back-end do APP **MarmitaX** (em desenvolvimento). API desenvolvida em node.js, utilizando Prisma, Fastify e coiceitos de SOLID.
 
 ## how to run
 
