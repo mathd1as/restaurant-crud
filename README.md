@@ -1,5 +1,4 @@
 # MarmitaX API
-## Descrição
 Back-end do APP **MarmitaX** (em desenvolvimento).
 
 ## Tecnologias utilizadas 
