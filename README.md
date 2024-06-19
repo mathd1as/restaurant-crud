@@ -1,4 +1,4 @@
-# Restaurant API
+# Restaurant CRUD
 API para cadastro de restaurantes e produtos.
 
 ## Tecnologias utilizadas 
